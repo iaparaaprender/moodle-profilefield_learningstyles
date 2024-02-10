@@ -1,0 +1,734 @@
+#profilefield_learningstyles-index {
+    background-size: 100% 100%;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1025px;
+    height: 675px;
+    margin: auto;
+    position: relative;
+}
+
+#profilefield_learningstyles-index .testcontent {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    top: 26px;
+}
+
+#profilefield_learningstyles-index .onepage {
+    display: none;
+}
+
+#profilefield_learningstyles-index .onepage.active {
+    display: block;
+}
+
+#profilefield_learningstyles-index .onepage.pagelarge .page-body {
+    display: block;
+    font-size: 100%;
+}
+
+#profilefield_learningstyles-index .onepage .page-header {
+    background: url([[pix:profilefield_learningstyles|bgtitle]]) no-repeat;
+    width: 914px;
+    height: 95px;
+    margin: auto;
+    text-align: center;
+}
+
+#profilefield_learningstyles-index .onepage .page-header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 95px;
+    padding-top: 35px;
+    margin: auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#profilefield_learningstyles-index .onepage .page-body {
+    width: 85%;
+    margin: auto;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    padding-top: 40px;
+    overflow: auto;
+}
+
+#profilefield_learningstyles-index .onepage [data-view="udea"] .page-body {
+    padding-top: 0;
+}
+
+#profilefield_learningstyles-index .onepage.resultspage .page-body {
+    padding-top: 0;
+}
+
+#profilefield_learningstyles-index .onepage.resultspage .test-btns {
+    padding: 0;
+}
+
+#profilefield_learningstyles-index .questionbody {
+    border: 1px solid #cc3d6c;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 20px;
+}
+
+#profilefield_learningstyles-index [data-view="udea"] .questionbody {
+    font-size: 18px;
+    padding: 10px 30px;
+}
+
+#profilefield_learningstyles-index .questionbody label {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    background-color: #ff416e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#profilefield_learningstyles-index .questionoptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#profilefield_learningstyles-index .questionoptions > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    margin: 20px 40px 0;
+    position: relative;
+}
+
+#profilefield_learningstyles-index [data-view="udea"] .questionoptions {
+    align-items: first baseline;
+}
+
+#profilefield_learningstyles-index [data-view="udea"] .questionoptions > div {
+    width: 330px;
+}
+
+#profilefield_learningstyles-index .questionoptions > div:before,
+#profilefield_learningstyles-index .questionoptions > div:after {
+    content: "";
+    border: 1px solid #fff;
+    width: 40%;
+    top: -10px;
+    bottom: -10px;
+}
+
+#profilefield_learningstyles-index .questionoptions > div:before {
+    border-right: none;
+    position: absolute;
+    left: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+#profilefield_learningstyles-index .questionoptions > div:after {
+    border-left: none;
+    position: absolute;
+    right: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+#profilefield_learningstyles-index .questionoptions > div > .imagecontainer {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#profilefield_learningstyles-index .questionoptions > div > .imagecontainer img {
+    max-width: 100%;
+}
+
+#profilefield_learningstyles-index .questionoptions > div.checked button:after {
+    content: "";
+    font: normal normal normal 14px/1 "FontAwesome";
+    font-size: 80px;
+    color: #7e50e5;
+    position: absolute;
+    top: -65px;
+    right: 50px;
+    text-shadow: 1px 0 4px #eee;
+}
+
+#profilefield_learningstyles-index .questionoptions button {
+    border-radius: 20px;
+    color: #fff;
+    background-color: #ff416e;
+    border: none;
+    text-shadow: 0 1px 3px #333;
+    padding: 2px 15px;
+    position: relative;
+    outline: none;
+    margin: -30px;
+    z-index: 2;
+    font-size: 18px;
+    min-height: 40px;
+}
+
+#profilefield_learningstyles-index [data-view="udea"] .questionoptions button {
+    line-height: 22px;
+}
+
+#profilefield_learningstyles-index .questionoptions button:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    bottom: 4px;
+    left: -4px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+#profilefield_learningstyles-index .questionoptions .optionnot button {
+    background-color: #00e1c9;
+}
+
+#profilefield_learningstyles-index .questionoptions button:focus,
+#profilefield_learningstyles-index .questionoptions button:hover {
+    background-color: #888;
+}
+
+#profilefield_learningstyles-index .questionoptions button:active {
+    transform: scale(0.9);
+}
+
+#profilefield_learningstyles-index #test-userinfo {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+#profilefield_learningstyles-index #test-userinfo label {
+    font-size: 17px;
+}
+
+#profilefield_learningstyles-index #test-userinfo .col-form-label {
+    text-align: right;
+}
+
+#profilefield_learningstyles-index #test-userinfo .input-group.required input {
+    border: 2px dashed #ff416e;
+}
+
+#profilefield_learningstyles-index #viewslistglobal {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#profilefield_learningstyles-index .viewslist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#profilefield_learningstyles-index .viewslist li {
+    list-style: none;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #888;
+    border: none;
+    text-shadow: 0 1px 3px #333;
+    padding: 2px 15px;
+    font-family: "Nexa-Bold";
+    position: relative;
+    outline: none;
+    margin: 10px;
+    z-index: 2;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#profilefield_learningstyles-index .viewslist li.active {
+    background-color: #ff416e;
+}
+
+#profilefield_learningstyles-index .viewslist li:hover {
+    background-color: #00e1c9;
+}
+
+#profilefield_learningstyles-index .viewslist li:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    bottom: 4px;
+    left: -4px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+#profilefield_learningstyles-index li > label {
+    font-size: 22px;
+    color: #ff416e;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#profilefield_learningstyles-index .eachview {
+    display: none;
+}
+
+#profilefield_learningstyles-index .eachview.active {
+    display: block;
+}
+
+/* Aditional buttons*/
+#profilefield_learningstyles-index .test-btns {
+    text-align: center;
+    padding: 20px;
+}
+
+#profilefield_learningstyles-index .btn:not(.btn-link) {
+    border-radius: 20px;
+    color: #fff;
+    background-color: #ff416e;
+    border: none;
+    text-shadow: 0 1px 3px #333;
+    padding: 2px 15px;
+    font-family: "Nexa-Bold";
+    position: relative;
+    outline: none;
+    margin: 10px;
+    z-index: 2;
+    font-size: 24px;
+}
+
+#profilefield_learningstyles-index .btn:not(.btn-link):before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    bottom: 4px;
+    left: -4px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+#profilefield_learningstyles-index .btn.btn-primary {
+    background-color: #00e1c9;
+    outline: none;
+}
+
+#profilefield_learningstyles-index .btn.btn-secondary {
+    background-color: #ff416e;
+    color: #fff;
+    border: none;
+    padding: 2px 15px;
+    outline: none;
+}
+
+#profilefield_learningstyles-index .btn.btn-primary[disabled="disabled"],
+#profilefield_learningstyles-index .btn.btn-secondary[disabled="disabled"],
+#profilefield_learningstyles-index .btn[disabled="disabled"],
+#profilefield_learningstyles-index .btn.btn-secondary:focus,
+#profilefield_learningstyles-index .btn.btn-secondary:hover,
+#profilefield_learningstyles-index .btn:focus,
+#profilefield_learningstyles-index .btn:hover {
+    background-color: #888;
+    color: #fff;
+    border: none;
+}
+
+#profilefield_learningstyles-index .btn.btn-secondary:active,
+#profilefield_learningstyles-index .btn:active {
+    transform: scale(0.9);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+/* Fin Aditional buttons */
+
+/* Footer and page controls */
+#profilefield_learningstyles-index #testfooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#profilefield_learningstyles-index #controlbar {
+    width: 100%;
+}
+
+#profilefield_learningstyles-index #controlbar > button {
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 3px #333;
+    position: absolute;
+    color: #fff;
+    border: none;
+    bottom: 10px;
+    outline: none;
+}
+
+#profilefield_learningstyles-index #controlbar > button:hover {
+    filter: grayscale(1);
+}
+
+#profilefield_learningstyles-index #controlbar > button i {
+    color: #fff;
+    font-size: 38px;
+}
+
+#profilefield_learningstyles-index #controlbar .toleft {
+    left: 10px;
+    background-color: #7e50e2;
+}
+
+#profilefield_learningstyles-index #controlbar .toright {
+    right: 10px;
+    background-color: #ff416e;
+}
+
+#profilefield_learningstyles-index #controlbar #progressbar {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    right: 80px;
+    bottom: 25px;
+    left: 80px;
+    height: 13px;
+}
+
+#profilefield_learningstyles-index #controlbar #progressinner {
+    background-color: #00e1c9;
+    height: 11px;
+    width: 0;
+}
+/* End of Footer and page controls*/
+
+/* Results box */
+.test-results {
+    width: 100%;
+}
+
+.profilefield_learningstyles-results .onestyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resultspage .profilefield_learningstyles-results .onestyle {
+    background-color: #ff416e;
+    color: #fff;
+    box-shadow: 2px 2px 3px #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.profilefield_learningstyles-results .onestyle label {
+    width: 30%;
+    min-width: 100px;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.profilefield_learningstyles-results .onestyle label i {
+    margin: 0;
+}
+
+.resultspage .profilefield_learningstyles-results .onestyle label i {
+    color: #fff !important;/* stylelint-disable-line declaration-no-important */
+}
+
+.profilefield_learningstyles-results .onestyle label:first-child {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.profilefield_learningstyles-results .onestyle label:last-child {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.profilefield_learningstyles-results .onestyle .bar {
+    display: flex;
+    border-radius: 10px;
+    background-color: #02dec5;
+    width: 70%;
+    overflow: hidden;
+    border: 1px solid #fff;
+    position: relative;
+    height: 20px;
+}
+
+.resultspage .profilefield_learningstyles-results .onestyle .bar {
+    height: 30px;
+}
+
+.profilefield_learningstyles-results .onestyle .bar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 12);
+    background-color: #2a217c;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* End of Results box */
+
+/* Explanations */
+.profilefield_learningstyles-content .explanationpage {
+    max-width: 700px;
+    margin: auto;
+}
+
+.profilefield_learningstyles-content .styleswithexplanation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+
+.profilefield_learningstyles-content .styleswithexplanation p {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.profilefield_learningstyles-content .imagecontent {
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.profilefield_learningstyles-content .imgquestion {
+    background-image: url([[pix:profilefield_learningstyles|content/question]]);
+    width: 300px;
+    height: 300px;
+}
+
+.profilefield_learningstyles-content .imgthink {
+    background-image: url([[pix:profilefield_learningstyles|content/think]]);
+    width: 300px;
+    height: 300px;
+}
+
+.profilefield_learningstyles-content .imgdimension {
+    background-image: url([[pix:profilefield_learningstyles|content/dimension]]);
+    width: 500px;
+    height: 500px;
+}
+
+.profilefield_learningstyles-content .imgbar {
+    background-image: url([[pix:profilefield_learningstyles|content/bar]]);
+    width: 500px;
+    height: 500px;
+}
+
+.profilefield_learningstyles-content .imgstyle {
+    width: 300px;
+    height: 300px;
+}
+
+.profilefield_learningstyles-content .imgactive {
+    background-image: url([[pix:profilefield_learningstyles|content/active]]);
+}
+
+.profilefield_learningstyles-content .imgglobal {
+    background-image: url([[pix:profilefield_learningstyles|content/global]]);
+    height: 200px;
+}
+
+.profilefield_learningstyles-content .imgintuitive {
+    background-image: url([[pix:profilefield_learningstyles|content/intuitive]]);
+}
+
+.profilefield_learningstyles-content .imgreflective {
+    background-image: url([[pix:profilefield_learningstyles|content/reflective]]);
+    height: 200px;
+}
+
+.profilefield_learningstyles-content .imgsensing {
+    background-image: url([[pix:profilefield_learningstyles|content/sensing]]);
+}
+
+.profilefield_learningstyles-content .imgsequential {
+    background-image: url([[pix:profilefield_learningstyles|content/sequential]]);
+}
+
+.profilefield_learningstyles-content .imgvisual {
+    background-image: url([[pix:profilefield_learningstyles|content/visual]]);
+}
+
+.profilefield_learningstyles-content .imgverbal {
+    background-image: url([[pix:profilefield_learningstyles|content/verbal]]);
+}
+
+.profilefield_learningstyles-content .stylefeedback {
+    border-bottom: 2px solid;
+}
+
+.profilefield_learningstyles-content .stylefeedback .imgstyle {
+    width: 200px;
+    height: 200px;
+}
+
+.profilefield_learningstyles-content .stylefeedback > p > strong {
+    font-size: 22px;
+    display: block;
+}
+
+.profilefield_learningstyles-content .stylefeedback [data-level] {
+    display: none;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.profilefield_learningstyles-content .stylefeedback [data-level="1"] {
+    color: gold;
+}
+
+.profilefield_learningstyles-content .stylefeedback [data-level="2"] {
+    color: greenyellow;
+}
+
+.profilefield_learningstyles-content .stylefeedback [data-level="3"] {
+    color: deeppink;
+}
+
+/* End of Explanations */
+
+@media (min-width: 901px) {
+    #profilefield_learningstyles-index {
+        background: url([[pix:profilefield_learningstyles|bgpage]]);
+    }
+}
+
+@media (max-width: 900px) {
+
+    #profilefield_learningstyles-index {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+        height: auto;
+        background: url([[pix:profilefield_learningstyles|bgmin]]);
+    }
+
+    #profilefield_learningstyles-index .testcontent {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-bottom: 50px;
+    }
+
+    #profilefield_learningstyles-index .onepage {
+        min-height: 100vw;
+        margin-bottom: 50px;
+    }
+
+    #profilefield_learningstyles-index .onepage .page-body {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 20px;
+        font-size: 15px;
+        padding-bottom: 1px;
+    }
+
+    #profilefield_learningstyles-index .onepage .page-header {
+        width: 100%;
+        background: rgba(109, 75, 222, 0.5);
+        border-bottom: 1px solid #fff;
+        height: unset;
+    }
+
+    #profilefield_learningstyles-index .onepage .page-header .page-title {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        line-height: 20px;
+        font-size: 16px;
+        padding: 10px 5px 0;
+    }
+
+    #profilefield_learningstyles-index .onepage p {
+        font-size: 18px;
+    }
+
+    #profilefield_learningstyles-index .questionbody {
+        padding: 5px 5px 5px 35px;
+    }
+
+    #profilefield_learningstyles-index .questionoptions {
+        margin-bottom: 50px;
+    }
+
+    #profilefield_learningstyles-index .questionoptions > div {
+        margin: 10px 10px 0;
+    }
+
+    #profilefield_learningstyles-index .questionoptions > div > .imagecontainer {
+        width: 150px;
+        height: 90px;
+    }
+
+    #profilefield_learningstyles-index .questionoptions button {
+        font-size: 12px;
+    }
+
+    #profilefield_learningstyles-index .questionoptions > div.checked button:after {
+        font-size: 60px;
+        top: -50px;
+        right: 19px;
+    }
+
+    #profilefield_learningstyles-index #testfooter {
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 400px) {
+
+    #profilefield_learningstyles-index .onepage {
+        min-height: 50vw;
+    }
+}
