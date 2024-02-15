@@ -346,9 +346,12 @@ var drawResults = (maincontainer) => {
     calcAffinity($maincontainer);
 
     questionStructure.forEach(group => {
-        let $bar = $container.find('[data-style="' + group.key + '"] .bar > div');
+        let $bar = $container.find('[data-style="' + group.key + '"] .bar');
+        let $indicator = $bar.find('> div');
         let percent = (group.affinity + 11) * 100 / 22;
-        $bar.css('left', 'calc(' + percent + '% - 100% / 12)');
+        let barwidth = $bar.width();
+        let left = (barwidth - barwidth / 12) * percent / 100;
+        $indicator.css('left', left + 'px');
 
         group.styles.forEach((style) => {
             let affinity = Math.abs(group.affinity);

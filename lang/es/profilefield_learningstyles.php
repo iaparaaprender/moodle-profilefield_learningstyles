@@ -63,7 +63,7 @@ $string['testdescription'] = '<p>El cuestionario de Estilos de Aprendizaje de Fe
 <li>El cuestionario consta de 44 preguntas, pero no se preocupe, son cortas y fáciles de responder. Lo más importante es que reflexione sobre sus formas personales de asimilar y procesar la información, es decir, esas preferencias o tendencias que tiene a la hora de aprender un tema nuevo.</li>
 <li>Cada pregunta tiene dos opciones de respuesta. Usted decide cuál se le ajusta mejor, ya que no existen respuestas correctas ni incorrectas. Se trata simplemente de identificar sus estilos de aprendizaje.</li>
 <li>Es importante destacar que este cuestionario no generará resultados aprobatorios o reprobatorios. Le entregará un gráfico de barras donde se señalan las formas en que, según el cuestionario, prefiere aprender.</li>
-<li>Puede realizar el cuestionario cuantas veces desees, recuerde que su estilo de aprendizaje es flexible y cambiante. Así, si se haces consciente de que sus preferencias o tendencias cambian según ciertos momentos o temas, puede realizar el cuestionario con esas nuevas apreciaciones.</li>
+<li>Puede realizar el cuestionario cuantas veces desee, recuerde que su estilo de aprendizaje es flexible y cambiante. Así, si se hace consciente de que sus preferencias o tendencias cambian según ciertos momentos o temas, puede realizar el cuestionario con esas nuevas apreciaciones.</li>
 </ul>';
 $string['testdone'] = 'Prueba completada';
 $string['testdoneinfo'] = 'La prueba ha sido completada. Puede ver los resultados a continuación.';
@@ -360,7 +360,7 @@ $string['udea_37'] = 'Estás en una conferencia de trabajo y conoces a mucha gen
 $string['udea_37_a'] = 'Eres extrovertido y amigable y comienzas fácilmente conversaciones con gente nueva. Te gusta conocer gente nueva y aprender sobre sus antecedentes y experiencias';
 $string['udea_37_b'] = 'Eres más reservado y tímido y te resulta difícil iniciar conversaciones con gente nueva. Prefieres escuchar a los demás y observarlos antes de hablar';
 $string['udea_38'] = 'Estás eligiendo cursos para tu programa universitario. ¿Qué criterio es más importante para ti a la hora de elegir cursos?';
-$string['udea_38_a'] = 'Prefiere cursos que se centren en material concreto, como hechos, datos y ejemplos específicos';
+$string['udea_38_a'] = 'Prefieres cursos que se centren en material concreto, como hechos, datos y ejemplos específicos';
 $string['udea_38_b'] = 'Prefieres cursos que se centren en material abstracto, como conceptos, teorías y principios generales';
 $string['udea_39'] = 'Buscas cómo relajarte y divertirte un sábado por la tarde. ¿Qué preferirías hacer?';
 $string['udea_39_a'] = 'Ver televisión. Puedes elegir entre una variedad de programas, películas y documentales';
