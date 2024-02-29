@@ -1,19 +1,15 @@
 #profilefield_learningstyles-index {
-    background-size: 100% 100%;
+    background-color: #333;
     width: 100%;
     max-width: 1200px;
     min-width: 1025px;
-    height: 675px;
+    height: auto;
     margin: auto;
     position: relative;
 }
 
 #profilefield_learningstyles-index .testcontent {
-    position: absolute;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    top: 26px;
+    position: relative;
 }
 
 #profilefield_learningstyles-index .onepage {
@@ -26,7 +22,7 @@
 
 #profilefield_learningstyles-index .onepage.pagelarge .page-body {
     display: block;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 #profilefield_learningstyles-index .onepage .page-header {
@@ -53,7 +49,6 @@
 #profilefield_learningstyles-index .onepage .page-body {
     width: 85%;
     margin: auto;
-    height: 490px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,23 +56,15 @@
     font-size: 22px;
     color: #fff;
     padding-top: 40px;
-    overflow: auto;
+    padding-bottom: 100px;
 }
 
-#profilefield_learningstyles-index .onepage [data-view="udea"] .page-body {
-    padding-top: 0;
-}
-
-#profilefield_learningstyles-index .onepage.resultspage .page-body {
-    padding-top: 0;
-}
-
-#profilefield_learningstyles-index .onepage.resultspage .test-btns {
-    padding: 0;
+#profilefield_learningstyles-index .onepage .page-body .testquestion {
+    padding-top: 60px;
 }
 
 #profilefield_learningstyles-index .questionbody {
-    border: 1px solid #cc3d6c;
+    border: 1px solid #fff;
     padding: 15px 40px;
     text-align: center;
     border-radius: 15px;
@@ -94,7 +81,7 @@
     position: absolute;
     left: -20px;
     top: -20px;
-    background-color: #ff416e;
+    background-color: #3498db;
     border: 2px solid #fff;
     border-radius: 50%;
     display: block;
@@ -161,7 +148,6 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 30px;
 }
 
 #profilefield_learningstyles-index .questionoptions > div > .imagecontainer img {
@@ -182,35 +168,23 @@
 #profilefield_learningstyles-index .questionoptions button {
     border-radius: 20px;
     color: #fff;
-    background-color: #ff416e;
-    border: none;
+    background-color: #3498db;
     text-shadow: 0 1px 3px #333;
     padding: 2px 15px;
     position: relative;
     outline: none;
-    margin: -30px;
     z-index: 2;
     font-size: 18px;
     min-height: 40px;
+    border: 1px solid #fff;
 }
 
 #profilefield_learningstyles-index [data-view="udea"] .questionoptions button {
     line-height: 22px;
 }
 
-#profilefield_learningstyles-index .questionoptions button:before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    right: 4px;
-    bottom: 4px;
-    left: -4px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-}
-
 #profilefield_learningstyles-index .questionoptions .optionnot button {
-    background-color: #00e1c9;
+    background-color: #00bc8c;
 }
 
 #profilefield_learningstyles-index .questionoptions button:focus,
@@ -237,12 +211,12 @@
 }
 
 #profilefield_learningstyles-index #test-userinfo .input-group.required input {
-    border: 2px dashed #ff416e;
+    border: 2px dashed #3498db;
 }
 
 #profilefield_learningstyles-index #viewslistglobal {
     position: absolute;
-    top: -40px;
+    top: 90px;
     left: 0;
     right: 0;
     display: none;
@@ -262,7 +236,6 @@
     border-radius: 20px;
     color: #fff;
     background-color: #888;
-    border: none;
     text-shadow: 0 1px 3px #333;
     padding: 2px 15px;
     font-family: "Nexa-Bold";
@@ -272,30 +245,20 @@
     z-index: 2;
     font-size: 24px;
     cursor: pointer;
+    border: 1px solid #fff;
 }
 
 #profilefield_learningstyles-index .viewslist li.active {
-    background-color: #ff416e;
+    background-color: #3498db;
 }
 
 #profilefield_learningstyles-index .viewslist li:hover {
-    background-color: #00e1c9;
-}
-
-#profilefield_learningstyles-index .viewslist li:before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    right: 4px;
-    bottom: 4px;
-    left: -4px;
-    border: 1px solid #fff;
-    border-radius: 20px;
+    background-color: #00bc8c;
 }
 
 #profilefield_learningstyles-index li > label {
     font-size: 22px;
-    color: #ff416e;
+    color: #3498db;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -317,40 +280,25 @@
 #profilefield_learningstyles-index .btn:not(.btn-link) {
     border-radius: 20px;
     color: #fff;
-    background-color: #ff416e;
-    border: none;
+    background-color: #3498db;
     text-shadow: 0 1px 3px #333;
     padding: 2px 15px;
     font-family: "Nexa-Bold";
     position: relative;
-    outline: none;
     margin: 10px;
     z-index: 2;
     font-size: 24px;
-}
-
-#profilefield_learningstyles-index .btn:not(.btn-link):before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    right: 4px;
-    bottom: 4px;
-    left: -4px;
     border: 1px solid #fff;
-    border-radius: 20px;
 }
 
 #profilefield_learningstyles-index .btn.btn-primary {
-    background-color: #00e1c9;
-    outline: none;
+    background-color: #00bc8c;
 }
 
 #profilefield_learningstyles-index .btn.btn-secondary {
-    background-color: #ff416e;
+    background-color: #3498db;
     color: #fff;
-    border: none;
     padding: 2px 15px;
-    outline: none;
 }
 
 #profilefield_learningstyles-index .btn.btn-primary[disabled="disabled"],
@@ -362,15 +310,11 @@
 #profilefield_learningstyles-index .btn:hover {
     background-color: #888;
     color: #fff;
-    border: none;
 }
 
 #profilefield_learningstyles-index .btn.btn-secondary:active,
 #profilefield_learningstyles-index .btn:active {
-    transform: scale(0.9);
     color: #fff;
-    border: none;
-    outline: none;
 }
 
 /* Fin Aditional buttons */
@@ -415,7 +359,7 @@
 
 #profilefield_learningstyles-index #controlbar .toright {
     right: 10px;
-    background-color: #ff416e;
+    background-color: #3498db;
 }
 
 #profilefield_learningstyles-index #controlbar #progressbar {
@@ -429,7 +373,7 @@
 }
 
 #profilefield_learningstyles-index #controlbar #progressinner {
-    background-color: #00e1c9;
+    background-color: #00bc8c;
     height: 11px;
     width: 0;
 }
@@ -451,7 +395,7 @@
 }
 
 .resultspage .profilefield_learningstyles-results .onestyle {
-    background-color: #ff416e;
+    background-color: #3498db;
     color: #fff;
     box-shadow: 2px 2px 3px #333;
     margin: 20px;
@@ -635,20 +579,18 @@
 
 /* End of Explanations */
 
-@media (min-width: 901px) {
-    #profilefield_learningstyles-index {
-        background: url([[pix:profilefield_learningstyles|bgpage]]);
-    }
-}
-
 @media (max-width: 900px) {
+
+    #profilefield_learningstyles-index .onepage .page-header h3 {
+        width: 100%;
+        padding-top: 0;
+    }
 
     #profilefield_learningstyles-index {
         width: 100%;
         max-width: 100%;
         min-width: unset;
         height: auto;
-        background: url([[pix:profilefield_learningstyles|bgmin]]);
     }
 
     #profilefield_learningstyles-index .testcontent {
@@ -723,6 +665,19 @@
 
     #profilefield_learningstyles-index #testfooter {
         bottom: 30px;
+    }
+
+    #profilefield_learningstyles-index .viewslist {
+        display: block;
+    }
+
+    #profilefield_learningstyles-index .viewslist li {
+        font-size: 110%;
+        line-height: 130%;
+    }
+
+    #profilefield_learningstyles-index .onepage .page-body .testquestion {
+        padding-top: 150px;
     }
 }
 

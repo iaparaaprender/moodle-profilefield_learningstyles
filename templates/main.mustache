@@ -78,12 +78,12 @@
                     </div>
                 </div>
             </div>
-            <div class="onepage" data-type="info">
+            <div class="onepage pagelarge" data-type="info">
                 <div class="page-header">
                     <h3>{{#str}} testtitle, profilefield_learningstyles {{/str}}</h3>
                 </div>
                 <div class="page-body">
-                    <p>{{#str}} testavailables, profilefield_learningstyles {{/str}}</p>
+                    {{#str}} testavailables, profilefield_learningstyles {{/str}}
                     <ul>
                         {{#views}}
                             <li>
@@ -111,15 +111,19 @@
                                 </div>
                                 <div class="questionoptions">
                                     <div class="optiona">
+                                        {{#urla}}
                                         <div class="imagecontainer">
                                             <img src="{{{urla}}}" alt="{{a}}" />
                                         </div>
+                                        {{/urla}}
                                         <button data-type="a">{{a}}</button>
                                     </div>
                                     <div class="optionb">
+                                        {{#urlb}}
                                         <div class="imagecontainer">
                                             <img src="{{{urlb}}}" alt="{{b}}" />
                                         </div>
+                                        {{/urlb}}
                                         <button data-type="b">{{b}}</button>
                                     </div>
                                 </div>

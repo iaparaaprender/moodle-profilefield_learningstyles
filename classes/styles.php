@@ -35,7 +35,13 @@ class styles {
      * Available views.
      * @var array
      */
-    const VIEWS = ['fys', 'udea'];
+    const VIEWS = ['fys', 'fsi', 'udea'];
+
+    /**
+     * Views with images.
+     * @var array
+     */
+    const VIEWS_USING_IMAGE = ['fsi', 'udea'];
 
     /**
      * Length of the styles.
@@ -87,15 +93,22 @@ class styles {
             $items = [];
             foreach (self::VIEWS as $view) {
 
-                $items[] = [
+                $item = [
                     'key' => $view,
                     'name' => get_string($view . '_name', 'profilefield_learningstyles'),
                     'question' => get_string($view . '_' . $k, 'profilefield_learningstyles'),
                     'a' => get_string($view . '_' . $k . '_a', 'profilefield_learningstyles'),
-                    'b' => get_string($view . '_' . $k . '_b', 'profilefield_learningstyles'),
-                    'urla' => new \moodle_url("/user/profile/field/learningstyles/views/{$view}/{$k}a.png"),
-                    'urlb' => new \moodle_url("/user/profile/field/learningstyles/views/{$view}/{$k}b.png"),
+                    'b' => get_string($view . '_' . $k . '_b', 'profilefield_learningstyles')
                 ];
+
+                if (in_array($view, self::VIEWS_USING_IMAGE)) {
+                    $item += [
+                        'urla' => new \moodle_url("/user/profile/field/learningstyles/views/{$view}/{$k}a.png"),
+                        'urlb' => new \moodle_url("/user/profile/field/learningstyles/views/{$view}/{$k}b.png"),
+                    ];
+                }
+
+                $items[] = $item;
             }
 
             $styles[] = [
