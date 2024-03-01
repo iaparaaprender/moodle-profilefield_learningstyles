@@ -175,14 +175,15 @@ export const init = async (structureJSON) => {
 
         var $current = getCurrentPage();
 
-        $current.hide();
-        currentpage--;
-        $current = getCurrentPage();
-        $current.show();
-        moving = false;
-        setBoard();
-        location.hash = '';
-        location.hash = "#pageslist";
+        $current.hide(200, function() {
+            currentpage--;
+            let $current = getCurrentPage();
+            $current.show(200, function() {
+                moving = false;
+            });
+            setBoard();
+        });
+
     });
 
     $toright.on('click', function(e) {
@@ -195,14 +196,14 @@ export const init = async (structureJSON) => {
         var $current = getCurrentPage();
 
         moving = true;
-        $current.hide();
-        currentpage++;
-        $current = getCurrentPage();
-        $current.show();
-        moving = false;
-        setBoard();
-        location.hash = '';
-        location.hash = "#pageslist";
+        $current.hide(200, function() {
+            currentpage++;
+            $current = getCurrentPage();
+            $current.show(200, function() {
+                moving = false;
+            });
+            setBoard();
+        });
     });
 
     $maincontainer.find('[data-go]').on('click', function(e) {

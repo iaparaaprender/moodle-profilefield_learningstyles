@@ -4,6 +4,7 @@
     max-width: 1200px;
     min-width: 1025px;
     height: auto;
+    min-height: 600px;
     margin: auto;
     position: relative;
 }
