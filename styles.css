@@ -63,6 +63,15 @@
     padding-top: 60px;
 }
 
+#profilefield_learningstyles-index .onepage .page-body .card {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#profilefield_learningstyles-index .onepage .page-body .card .card-footer {
+    text-align: center;
+}
+
 #profilefield_learningstyles-index .questionbody {
     border: 1px solid #fff;
     padding: 15px 40px;
@@ -574,7 +583,7 @@
 }
 
 .profilefield_learningstyles-content .stylefeedback [data-level="3"] {
-    color: deeppink;
+    color: darksalmon;
 }
 
 /* End of Explanations */

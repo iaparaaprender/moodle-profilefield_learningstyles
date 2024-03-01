@@ -56,11 +56,17 @@ $string['style_sensing'] = 'Sensing';
 $string['style_sequential'] = 'Sequential';
 $string['style_visual'] = 'Visual';
 $string['style_verbal'] = 'Verbal';
-$string['testavailables'] = 'The availables styles tests are:';
-$string['testdescription'] = 'This test will help you to understand your learning style.
-There are no right or wrong answers.
-Please answer as honestly as possible.
-This test is not timed, but should take approximately 10 minutes to complete.';
+$string['testavailables'] = '<h5>The availables styles tests are:</h5>
+<p>Below you will find three different ways to view and answer the learning styles questionnaire. You can change the type of questionnaire at any time and access the one that is most comfortable for you.</p>';
+$string['testdescription'] = '<p>The Felder and Silverman Learning Styles questionnaire is a valuable questionnaire designed to assess your preferences and tendencies during the learning process. This quiz gives you the opportunity to discover your preferred approaches to assimilating and processing information, whether through observation or listening, reflection or action, analysis or visualization, and in a linear or global manner.</ p>
+<p>We invite you to complete the questionnaire taking into account that:</p>
+<ul>
+<li>You can view the questionnaire in three different ways: one that includes the questions textually, another that includes supporting images and another that poses the questions from exemplary experiences.</li>
+<li>Each quiz consists of 44 questions, but don\'t worry, they are short and easy to answer. The most important thing is that you reflect on your personal ways of assimilating and processing information, that is, those preferences or tendencies you have when learning a new topic.</li>
+<li>Each question has two answer options. You decide which one fits you best, as there are no right or wrong answers. It\'s simply about identifying your learning styles.</li>
+<li>It is important to note that this questionnaire will not generate passing or failing results. You will be given a bar graph showing the ways in which, according to the questionnaire, you prefer to learn.</li>
+<li>You can take the quiz as many times as you want, remember that your learning style is flexible and changing. Thus, if you become aware that your preferences or tendencies change depending on certain moments or topics, you can take the questionnaire with these new appreciations.</li>
+</ul>';
 $string['testdone'] = 'The test has been completed';
 $string['testdoneinfo'] = 'The test has been completed. You can see the results below.';
 $string['testresults'] = 'Test results';
@@ -241,7 +247,7 @@ $string['fys_44_b'] = 'think of possible consequences or applications of the sol
 
 // Felder-Silverman questions using images as improvement.
 $string['fsi_name'] = 'Straight-Up Questions supported in images - Felder-Silverman Learning Styles';
-$string['fsi_label'] = 'Straight-Up Questions with images';
+$string['fsi_label'] = 'Questions with images';
 $string['fsi_description'] = 'It is the same Felder and Silverman questionnaire supported by images that serve as a visual aid and provide an exemplary meaning to the question.';
 $string['fsi_1'] = 'I understand something better after I';
 $string['fsi_1_a'] = 'try it out';
@@ -377,7 +383,7 @@ $string['fsi_44_a'] = 'think of the steps in the solution process';
 $string['fsi_44_b'] = 'think of possible consequences or applications of the solution in a wide range of areas';
 
 // UdeA questions.
-$string['udea_name'] = 'Preguntas experienciales - Universidad de Antioquia questions';
+$string['udea_name'] = 'Questions based on your experience - Universidad de Antioquia';
 $string['udea_label'] = 'Questions based on your experience';
 $string['udea_description'] = 'The Universidad de Antioquia questions is an adaptation of the Felder-Silverman Learning Styles model. Use questions based on your experience to identify your learning style.';
 $string['udea_1'] = 'You are a college student taking a biology course. You will soon have a test on the circulatory system.

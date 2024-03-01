@@ -84,15 +84,28 @@
                 </div>
                 <div class="page-body">
                     {{#str}} testavailables, profilefield_learningstyles {{/str}}
-                    <ul>
+
+                    <div class="container-fluid">
+                        <div class="row">
                         {{#views}}
-                            <li>
-                                <label>{{label}}</label>
-                                <span>{{{description}}}</span>
-                                <button class="btn btn-secondary" data-go="next" data-changeview="{{key}}">{{#str}} starttest, profilefield_learningstyles {{/str}}</button>
-                            </li>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <h5 class="card-header">
+                                        {{label}}
+                                    </h5>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            {{{description}}}
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-secondary" data-go="next" data-changeview="{{key}}">{{#str}} starttest, profilefield_learningstyles {{/str}}</button>
+                                    </div>
+                                </div>
+                            </div>
                         {{/views}}
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -141,7 +154,7 @@
                 <div class="page-body">
                     <p>{{#str}} testdoneinfo, profilefield_learningstyles {{/str}}</p>
                     <div class="test-btns">
-                        <button class="btn btn-primary test-btns-save" data-sesskey="{{sesskey}}" data-go="next">
+                        <button class="btn btn-primary test-btns-save" data-sesskey="{{sesskey}}">
                             {{#str}} continue, profilefield_learningstyles {{/str}}
                         </button>
                     </div>
