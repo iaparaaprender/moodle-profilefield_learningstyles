@@ -33,6 +33,7 @@ use external_value;
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/externallib.php');
+require_once($CFG->dirroot . '/user/profile/lib.php');
 
 /**
  * Save service implementation.
@@ -125,6 +126,8 @@ class save extends external_api {
         } else {
             $DB->insert_record('user_info_data', $data);
         }
+
+        profile_load_custom_fields($USER);
 
         return true;
     }
