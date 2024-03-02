@@ -31,6 +31,7 @@ $string['learningstyles:report'] = 'View the test report';
 $string['pluginname'] = 'Learning styles';
 
 $string['adminreport'] = 'Learning styles report';
+$string['affinity'] = 'Affinity';
 $string['completetest'] = 'Complete the test';
 $string['continue'] = 'Continue';
 $string['endpagetitle'] = 'Test ended';
@@ -40,11 +41,15 @@ $string['explanationlabel'] = 'About learning styles';
 $string['goback'] = 'Go back';
 $string['gotoprofile'] = 'Go to the profile';
 $string['gototest'] = 'Go to the test';
+$string['id'] = 'ID';
 $string['invalidanswers'] = 'Invalid answers format';
 $string['invalidsesskey'] = 'Invalid session key';
 $string['invaliduserfield'] = 'A user learning styles field is required. It must be a visible and not locked profile field.';
 $string['learningstyles'] = 'Learning styles';
 $string['notest'] = 'The user has not yet completed the learning styles survey.';
+$string['reportdata'] = 'Data';
+$string['reportfilterview'] = 'Content in response';
+$string['reportuserid'] = 'User ID';
 $string['retaketest'] = 'Retake the test';
 $string['resultstitle'] = 'Results interpretation';
 $string['starttest'] = 'Start the test';
@@ -69,6 +74,7 @@ $string['testdescription'] = '<p>The Felder and Silverman Learning Styles questi
 </ul>';
 $string['testdone'] = 'The test has been completed';
 $string['testdoneinfo'] = 'The test has been completed. You can see the results below.';
+$string['testreporttitle'] = 'Learning styles test report';
 $string['testresults'] = 'Test results';
 $string['testtitle'] = 'Learning styles test';
 

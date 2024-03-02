@@ -31,6 +31,7 @@ $string['learningstyles:report'] = 'Ver el reporte de estilos de aprendizaje';
 $string['pluginname'] = 'Estilos de aprendizaje';
 
 $string['adminreport'] = 'Reporte de estilos de aprendizaje';
+$string['affinity'] = 'Afinidad';
 $string['completetest'] = 'Completar la prueba';
 $string['continue'] = 'Continuar';
 $string['endpagetitle'] = 'Prueba finalizada';
@@ -45,6 +46,9 @@ $string['invalidsesskey'] = 'Clave de sesión inválida';
 $string['invaliduserfield'] = 'Se requiere por lo menos un campo de estilo de aprendizajes. Debe ser un campo de perfil visible y no bloqueado.';
 $string['learningstyles'] = 'Estilos de aprendizaje';
 $string['notest'] = 'El usuario aún no ha completado la encuesta de estilos de aprendizaje.';
+$string['reportdata'] = 'Datos';
+$string['reportfilterview'] = 'Contenido en respuesta';
+$string['reportuserid'] = 'ID de usuario';
 $string['retaketest'] = 'Volver a tomar la prueba';
 $string['resultstitle'] = 'Interpretación de resultados';
 $string['starttest'] = 'Iniciar la prueba';
@@ -71,6 +75,7 @@ $string['testdescription'] = '<p>El cuestionario de Estilos de Aprendizaje de Fe
 </ul>';
 $string['testdone'] = 'Prueba completada';
 $string['testdoneinfo'] = 'La prueba ha sido completada. Puede ver los resultados a continuación.';
+$string['testreporttitle'] = 'Reporte de estilos de aprendizaje';
 $string['testresults'] = 'Resultados de la prueba';
 $string['testtitle'] = '¿Cómo prefiero aprender?';
 
