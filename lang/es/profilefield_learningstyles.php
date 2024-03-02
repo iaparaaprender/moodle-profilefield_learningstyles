@@ -37,6 +37,7 @@ $string['continue'] = 'Continuar';
 $string['endpagetitle'] = 'Prueba finalizada';
 $string['endpagemessage'] = 'Gracias por tomarse el tiempo para completar el cuestionario. Puede continuar viendo los resultados en su perfil.';
 $string['errorsaving'] = 'Algo pasó y no se pudo guardar la información, intenta de nuevo por favor.';
+$string['eventfield_updated'] = 'Campo actualizado';
 $string['explanationlabel'] = 'Acerca de los estilos de aprendizaje';
 $string['goback'] = 'Ir atrás';
 $string['gotoprofile'] = 'Ir a mi perfil';

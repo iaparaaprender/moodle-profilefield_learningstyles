@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'profilefield_learningstyles';
-$plugin->release = '0.2.0';
-$plugin->version = 2024012202;
+$plugin->release = '0.2.01';
+$plugin->version = 2024012202.01;
 $plugin->requires = 2022112808;
 $plugin->maturity = MATURITY_BETA;

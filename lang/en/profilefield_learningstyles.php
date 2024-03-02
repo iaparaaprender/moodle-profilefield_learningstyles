@@ -37,6 +37,7 @@ $string['continue'] = 'Continue';
 $string['endpagetitle'] = 'Test ended';
 $string['endpagemessage'] = 'Thank you for taking the time to complete the test. You can continue viewing the results in your profile.';
 $string['errorsaving'] = 'Error saving the test. Try again.';
+$string['eventfield_updated'] = 'Field updated';
 $string['explanationlabel'] = 'About learning styles';
 $string['goback'] = 'Go back';
 $string['gotoprofile'] = 'Go to the profile';

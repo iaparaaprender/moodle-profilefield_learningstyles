@@ -127,6 +127,12 @@ class save extends external_api {
             $DB->insert_record('user_info_data', $data);
         }
 
+        $event = \profilefield_learningstyles\event\field_updated::create([
+            'objectid' => $lsfield->id,
+            'context' => $syscontext,
+        ]);
+        $event->trigger();
+
         profile_load_custom_fields($USER);
 
         return true;
