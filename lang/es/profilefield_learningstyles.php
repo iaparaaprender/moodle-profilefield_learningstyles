@@ -29,6 +29,7 @@ $string['learningstyles:complete'] = 'Completar la prueba de estilos de aprendiz
 $string['learningstyles:manage'] = 'Maejar la prueba de estilos de aprendizaje';
 $string['learningstyles:report'] = 'Ver el reporte de estilos de aprendizaje';
 $string['pluginname'] = 'Estilos de aprendizaje';
+$string['privacy:metadata'] = 'El componente Estilos de aprendizaje no almacena información personal.';
 
 $string['adminreport'] = 'Reporte de estilos de aprendizaje';
 $string['affinity'] = 'Afinidad';
@@ -36,6 +37,7 @@ $string['completetest'] = 'Completar la prueba';
 $string['continue'] = 'Continuar';
 $string['endpagetitle'] = 'Prueba finalizada';
 $string['endpagemessage'] = 'Gracias por tomarse el tiempo para completar el cuestionario. Puede continuar viendo los resultados en su perfil.';
+$string['errornotpermission'] = 'No tienes permisos para ver el estilo de aprendizaje de este usuario.';
 $string['errorsaving'] = 'Algo pasó y no se pudo guardar la información, intenta de nuevo por favor.';
 $string['eventfield_updated'] = 'Campo actualizado';
 $string['explanationlabel'] = 'Acerca de los estilos de aprendizaje';

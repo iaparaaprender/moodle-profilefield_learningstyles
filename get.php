@@ -15,32 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * External functions and service definitions.
+ * Page to quickly get the current user's style.
  *
  * @package     profilefield_learningstyles
  * @copyright   2024 David Herney - cirano
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+define('AJAX_SCRIPT', true);
 
-$functions = [
-    'profilefield_learningstyles_save' => [
-        'classname' => '\profilefield_learningstyles\external\save',
-        'classpath' => '',
-        'description' => 'Save the test results.',
-        'type' => 'write',
-        'ajax' => true,
-        'loginrequired' => true,
-    ],
+require_once('../../../../config.php');
 
-    'profilefield_learningstyles_get' => [
-        'classname' => '\profilefield_learningstyles\external\get',
-        'classpath' => '',
-        'description' => 'Get the current user learning styles.',
-        'type' => 'read',
-        'ajax' => true,
-        'loginrequired' => true,
-    ],
+$ws = new \profilefield_learningstyles\external\get();
+$styles = $ws->execute();
 
-];
+echo @json_encode($styles);
+exit;

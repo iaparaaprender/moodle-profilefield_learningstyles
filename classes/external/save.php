@@ -58,11 +58,11 @@ class save extends external_api {
     }
 
     /**
-     * Returns the transaction information about the buy.
+     * Save the test results.
      *
      * @param string $sesskey
      * @param string $answers
-     * @return object
+     * @return bool
      */
     public static function execute(string $sesskey, string $answers): bool {
         global $USER, $PAGE, $DB;

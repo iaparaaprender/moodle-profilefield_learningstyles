@@ -30,7 +30,7 @@ class field_updated extends \core\event\base {
      * Init method.
      */
     protected function init() {
-        $this->data['objecttable'] = 'profilefield_learningstyles';
+        $this->data['objecttable'] = 'user_info_data';
         $this->data['crud'] = 'u';
         $this->data['edulevel'] = self::LEVEL_OTHER;
     }

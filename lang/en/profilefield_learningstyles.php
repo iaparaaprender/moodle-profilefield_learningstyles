@@ -29,6 +29,7 @@ $string['learningstyles:complete'] = 'Complete the test';
 $string['learningstyles:manage'] = 'Manage the test';
 $string['learningstyles:report'] = 'View the test report';
 $string['pluginname'] = 'Learning styles';
+$string['privacy:metadata'] = 'The Learning styles plugin does not store privacy user information.';
 
 $string['adminreport'] = 'Learning styles report';
 $string['affinity'] = 'Affinity';
@@ -36,6 +37,7 @@ $string['completetest'] = 'Complete the test';
 $string['continue'] = 'Continue';
 $string['endpagetitle'] = 'Test ended';
 $string['endpagemessage'] = 'Thank you for taking the time to complete the test. You can continue viewing the results in your profile.';
+$string['errornotpermission'] = 'You do not have permission to view other users learning styles.';
 $string['errorsaving'] = 'Error saving the test. Try again.';
 $string['eventfield_updated'] = 'Field updated';
 $string['explanationlabel'] = 'About learning styles';

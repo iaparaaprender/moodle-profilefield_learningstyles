@@ -16,7 +16,7 @@
 /**
  * BuyBee repository module to encapsulate all of the AJAX requests that can be sent for BuyBee.
  *
- * @module      profilefield_learningstyles
+ * @module      profilefield_learningstyles/main
  * @copyright   2024 David Herney @ BambuCo - https://bambuco.co
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -36,7 +36,6 @@ var questionStructure = [];
 var strings = [
     {key: 'info'},
     {key: 'errorsaving', component: 'profilefield_learningstyles'},
-    {key: 'nomorecourses', component: 'profilefield_learningstyles'},
 ];
 var s = [];
 
