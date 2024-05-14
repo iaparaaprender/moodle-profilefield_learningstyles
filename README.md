@@ -2,6 +2,8 @@
 
 This is a profilefield component of Moodle that allows people to inquire about their learning style using the Felder-Silverman test and additional variations of it.
 
+View the user docs: [[en](docs/en/users.md)] [[es](docs/es/users.md)]
+
 ## Installing via uploaded ZIP file ##
 
 1. Log in to your Moodle site as an admin and go to _Site administration >
