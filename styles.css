@@ -466,6 +466,10 @@
     bottom: 0;
 }
 
+.profilefield_learningstyles-results .testdate {
+    font-size: 70%;
+    text-align: right;
+}
 /* End of Results box */
 
 /* Explanations */

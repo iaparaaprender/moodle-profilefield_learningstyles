@@ -35,6 +35,11 @@ $string['adminreport'] = 'Learning styles report';
 $string['affinity'] = 'Affinity';
 $string['completetest'] = 'Complete the test';
 $string['continue'] = 'Continue';
+$string['datecreated'] = 'Date created';
+$string['dimension_input'] = 'Input';
+$string['dimension_perception'] = 'Perception';
+$string['dimension_processing'] = 'Processing';
+$string['dimension_understanding'] = 'Understanding';
 $string['endpagetitle'] = 'Test ended';
 $string['endpagemessage'] = 'Thank you for taking the time to complete the test. You can continue viewing the results in your profile.';
 $string['errornotpermission'] = 'You do not have permission to view other users learning styles.';
@@ -44,6 +49,7 @@ $string['explanationlabel'] = 'About learning styles';
 $string['goback'] = 'Go back';
 $string['gotoprofile'] = 'Go to the profile';
 $string['gototest'] = 'Go to the test';
+$string['historytitle'] = 'Learning styles history';
 $string['id'] = 'ID';
 $string['invalidanswers'] = 'Invalid answers format';
 $string['invalidsesskey'] = 'Invalid session key';
@@ -64,6 +70,7 @@ $string['style_sensing'] = 'Sensing';
 $string['style_sequential'] = 'Sequential';
 $string['style_visual'] = 'Visual';
 $string['style_verbal'] = 'Verbal';
+$string['testanswerdate'] = 'According to test completed in {$a}';
 $string['testavailables'] = '<h5>The availables styles tests are:</h5>
 <p>Below you will find three different ways to view and answer the learning styles questionnaire. You can change the type of questionnaire at any time and access the one that is most comfortable for you.</p>';
 $string['testdescription'] = '<p>The Felder and Silverman Learning Styles questionnaire is a valuable questionnaire designed to assess your preferences and tendencies during the learning process. This quiz gives you the opportunity to discover your preferred approaches to assimilating and processing information, whether through observation or listening, reflection or action, analysis or visualization, and in a linear or global manner.</ p>
@@ -80,6 +87,7 @@ $string['testdoneinfo'] = 'The test has been completed. You can see the results 
 $string['testreporttitle'] = 'Learning styles test report';
 $string['testresults'] = 'Test results';
 $string['testtitle'] = 'Learning styles test';
+$string['timecreated'] = 'Time created';
 
 // Helps.
 $string['helpstyle_active'] = 'People with an active learning style learn best when they actively participate in activities or exercises. They prefer to learn by doing and experimenting in a practical way. This is why experiments and simulations can be some of their favourite activities. They may also show an interest in highly interactive resources.';

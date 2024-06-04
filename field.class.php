@@ -87,6 +87,10 @@ class profile_field_learningstyles extends profile_field_base {
             $renderdata = $data['affinity'];
             $renderdata['helpstyles'] = \profilefield_learningstyles\styles::get_helpstyles();
 
+            if (isset($data['datecreated'])) {
+                $renderdata['testdate'] = $data['datecreated'];
+            }
+
             $renderer = $PAGE->get_renderer('core');
             $html .= $renderer->render_from_template('profilefield_learningstyles/results', $renderdata);
 

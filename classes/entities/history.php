@@ -27,13 +27,13 @@ use core_reportbuilder\local\report\column;
 use core_reportbuilder\local\report\filter;
 
 /**
- * Test entity
+ * History entity
  *
  * @package     profilefield_learningstyles
  * @copyright   2024 David Herney - cirano
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class test extends base {
+class history extends base {
 
     /**
      * Database tables that this entity uses and their default aliases
@@ -42,7 +42,7 @@ class test extends base {
      */
     protected function get_default_table_aliases(): array {
         return [
-            'user_info_data' => 'uid'
+            'profilefield_learningstyles' => 'pls'
         ];
     }
 
@@ -52,7 +52,7 @@ class test extends base {
      * @return lang_string
      */
     protected function get_default_entity_title(): lang_string {
-        return new lang_string('testtitle', 'profilefield_learningstyles');
+        return new lang_string('historytitle', 'profilefield_learningstyles');
     }
 
     /**
@@ -84,7 +84,7 @@ class test extends base {
      * @throws \coding_exception
      */
     protected function get_all_columns(): array {
-        $testalias = $this->get_table_alias('user_info_data');
+        $testalias = $this->get_table_alias('profilefield_learningstyles');
 
         $columns[] = (new column(
             'id',
@@ -107,52 +107,65 @@ class test extends base {
             ->set_is_sortable(true);
 
         $columns[] = (new column(
-            'affinity',
-            new lang_string('affinity', 'profilefield_learningstyles'),
+            'processing',
+            new lang_string('dimension_processing', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.data")
-            ->set_type(column::TYPE_TEXT)
-            ->set_is_sortable(false)
-            ->set_callback(static function(?string $data): string {
-                $json = json_decode($data, true);
-                if (empty($json) || empty($json['affinity'])) {
-                    return '';
-                }
-                $affinity = [];
-                foreach ($json['affinity'] as $key => $value) {
-                    $affinity[] = $key . ': ' . $value;
-                }
-
-                return implode(', ', $affinity);
-            });
+            ->add_fields("$testalias.processing")
+            ->set_type(column::TYPE_INTEGER)
+            ->set_is_sortable(true);
 
         $columns[] = (new column(
-            'datecreated',
-            new lang_string('datecreated', 'profilefield_learningstyles'),
+            'understanding',
+            new lang_string('dimension_understanding', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.data")
-            ->set_type(column::TYPE_TEXT)
-            ->set_is_sortable(false)
-            ->set_callback(static function(?string $data): string {
-                $json = json_decode($data, true);
-                if (empty($json) || empty($json['datecreated'])) {
-                    return '';
-                } else {
-                    return $json['datecreated'];
-                }
+            ->add_fields("$testalias.understanding")
+            ->set_type(column::TYPE_INTEGER)
+            ->set_is_sortable(true);
+
+        $columns[] = (new column(
+            'perception',
+            new lang_string('dimension_perception', 'profilefield_learningstyles'),
+            $this->get_entity_name()
+        ))
+            ->add_joins($this->get_joins())
+            ->add_fields("$testalias.perception")
+            ->set_type(column::TYPE_INTEGER)
+            ->set_is_sortable(true);
+
+        $columns[] = (new column(
+            'input',
+            new lang_string('dimension_input', 'profilefield_learningstyles'),
+            $this->get_entity_name()
+        ))
+            ->add_joins($this->get_joins())
+            ->add_fields("$testalias.input")
+            ->set_type(column::TYPE_INTEGER)
+            ->set_is_sortable(true);
+
+        $columns[] = (new column(
+            'timecreated',
+            new lang_string('timecreated', 'profilefield_learningstyles'),
+            $this->get_entity_name()
+        ))
+            ->add_joins($this->get_joins())
+            ->add_fields("$testalias.timecreated")
+            ->set_type(column::TYPE_TIMESTAMP)
+            ->set_is_sortable(true)
+            ->set_callback(static function(?int $timecreated): string {
+                return empty($timecreated) ? '' : userdate($timecreated);
             });
 
         $columns[] = (new column(
-            'data',
+            'answers',
             new lang_string('reportdata', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.data")
+            ->add_fields("$testalias.answers")
             ->set_type(column::TYPE_TEXT)
             ->set_is_sortable(false);
 
@@ -168,7 +181,7 @@ class test extends base {
     protected function get_all_filters(): array {
 
         $filters = [];
-        $testalias = $this->get_table_alias('user_info_data');
+        $testalias = $this->get_table_alias('profilefield_learningstyles');
 
         $filters[] = (new filter(
             number::class,
@@ -181,10 +194,55 @@ class test extends base {
 
         $filters[] = (new filter(
             text::class,
-            'view',
+            'answers',
             new lang_string('reportfilterview', 'profilefield_learningstyles'),
             $this->get_entity_name(),
-            "$testalias.data",
+            "$testalias.answers",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            number::class,
+            'processing',
+            new lang_string('dimension_processing', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$testalias.processing",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            number::class,
+            'understanding',
+            new lang_string('dimension_understanding', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$testalias.understanding",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            number::class,
+            'perception',
+            new lang_string('dimension_perception', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$testalias.perception",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            number::class,
+            'input',
+            new lang_string('dimension_input', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$testalias.input",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            date::class,
+            'timecreated',
+            new lang_string('timecreated', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$testalias.timecreated",
         ))
             ->add_joins($this->get_joins());
 

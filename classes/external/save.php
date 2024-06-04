@@ -118,6 +118,8 @@ class save extends external_api {
         $data->data = json_encode([
             'answers' => $answers,
             'affinity' => $affinity,
+            'timecreated' => time(),
+            'datecreated' => date('Y-m-d H:i:s'),
         ]);
 
         if ($dataid = $DB->get_field('user_info_data', 'id', ['userid' => $USER->id, 'fieldid' => $lsfield->id])) {
@@ -126,6 +128,17 @@ class save extends external_api {
         } else {
             $DB->insert_record('user_info_data', $data);
         }
+
+        // Save data to profilefield_learningstyles table as history.
+        $newdata = new \stdClass();
+        $newdata->userid = $USER->id;
+        $newdata->answers = json_encode($answers);
+        $newdata->processing = $affinity['processing'];
+        $newdata->understanding = $affinity['understanding'];
+        $newdata->perception = $affinity['perception'];
+        $newdata->input = $affinity['input'];
+        $newdata->timecreated = time();
+        $DB->insert_record('profilefield_learningstyles', $newdata);
 
         $event = \profilefield_learningstyles\event\field_updated::create([
             'objectid' => $lsfield->id,

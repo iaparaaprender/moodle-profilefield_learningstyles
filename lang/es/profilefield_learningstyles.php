@@ -35,6 +35,11 @@ $string['adminreport'] = 'Reporte de estilos de aprendizaje';
 $string['affinity'] = 'Afinidad';
 $string['completetest'] = 'Completar la prueba';
 $string['continue'] = 'Continuar';
+$string['datecreated'] = 'Fecha de creación';
+$string['dimension_input'] = 'Entrada';
+$string['dimension_perception'] = 'Percepción';
+$string['dimension_processing'] = 'Procesamiento';
+$string['dimension_understanding'] = 'Comprensión';
 $string['endpagetitle'] = 'Prueba finalizada';
 $string['endpagemessage'] = 'Gracias por tomarse el tiempo para completar el cuestionario. Puede continuar viendo los resultados en su perfil.';
 $string['errornotpermission'] = 'No tienes permisos para ver el estilo de aprendizaje de este usuario.';
@@ -44,6 +49,7 @@ $string['explanationlabel'] = 'Acerca de los estilos de aprendizaje';
 $string['goback'] = 'Ir atrás';
 $string['gotoprofile'] = 'Ir a mi perfil';
 $string['gototest'] = 'Ir a la prueba';
+$string['historytitle'] = 'Historial de estilos de aprendizaje';
 $string['invalidanswers'] = 'Formato de respuestas inválido';
 $string['invalidsesskey'] = 'Clave de sesión inválida';
 $string['invaliduserfield'] = 'Se requiere por lo menos un campo de estilo de aprendizajes. Debe ser un campo de perfil visible y no bloqueado.';
@@ -63,6 +69,7 @@ $string['style_sensing'] = 'Sensorial';
 $string['style_sequential'] = 'Secuencial';
 $string['style_visual'] = 'Visual';
 $string['style_verbal'] = 'Verbal';
+$string['testanswerdate'] = 'Según prueba completada el {$a}';
 $string['testavailables'] = '<h5>Tipos de cuestionarios</h5>
 <p>
 A continuación, encontrarás tres formas diferentes de visualizar y responder al cuestionario sobre estilos de aprendizaje. Puedes cambiar de tipo de cuestionario en cualquier momento y acceder al que te resulte más cómodo.
@@ -81,6 +88,7 @@ $string['testdoneinfo'] = 'La prueba ha sido completada. Puede ver los resultado
 $string['testreporttitle'] = 'Reporte de estilos de aprendizaje';
 $string['testresults'] = 'Resultados de la prueba';
 $string['testtitle'] = '¿Cómo prefiero aprender?';
+$string['timecreated'] = 'Fecha de creación';
 
 // Helps.
 $string['helpstyle_active'] = 'Las personas con un estilo de aprendizaje activo aprenden mejor cuando participan activamente en actividades o ejercicios. Prefieren aprender haciendo y experimentando de manera práctica. Es por esta razón que los experimentos y las simulaciones pueden ser algunas de sus actividades favoritas. También pueden mostrar interés por recursos altamente interactivos.';

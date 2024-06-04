@@ -16,51 +16,45 @@
 
 namespace profilefield_learningstyles\systemreports;
 
-use profilefield_learningstyles\entities\test as entitytest;
+use profilefield_learningstyles\entities\history as entityhistory;
 use core_reportbuilder\local\helpers\database;
 use core_reportbuilder\system_report;
-use core_reportbuilder\local\report\action;
 
 /**
- * Test report.
+ * Test history report.
  *
  * @package     profilefield_learningstyles
  * @copyright   2024 David Herney - cirano
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class test extends system_report {
+class history extends system_report {
+
+    /**
+     * @var bool
+     */
+    private $adminreport;
 
     /**
      * Initialise report, we need to set the main table, load our entities and set columns/filters
      */
     protected function initialise(): void {
-        global $PAGE, $USER, $DB;
+        global $PAGE, $USER;
 
         // We need to ensure page context is always set, as required by output and string formatting.
         $PAGE->set_context($this->get_context());
 
         // Our main entity, it contains all of the column definitions that we need.
-        $entitymain = new entitytest();
-        $entitymainalias = $entitymain->get_table_alias('user_info_data');
+        $entitymain = new entityhistory();
+        $entitymainalias = $entitymain->get_table_alias('profilefield_learningstyles');
 
-        $this->set_main_table('user_info_data', $entitymainalias);
+        $this->set_main_table('profilefield_learningstyles', $entitymainalias);
         $this->add_entity($entitymain);
 
-        // Add the base condition to the report.
-        $fields = $DB->get_records('user_info_field', ['datatype' => 'learningstyles'], 'sortorder ASC');
-
-        if (empty($fields)) {
-            return;
-        }
-
-        $fieldids = implode(',', array_keys($fields));
-
         $params = [];
-        $where = [
-            "$entitymainalias.fieldid IN ($fieldids)",
-        ];
+        $where = [];
 
-        if (!has_capability('profilefield/learningstyles:report', $this->get_context())) {
+        $this->adminreport = has_capability('profilefield/learningstyles:report', $this->get_context());
+        if (!$this->adminreport) {
 
             $param = database::generate_param_name();
             $where[] = "$entitymainalias.userid = :$param";
@@ -98,12 +92,17 @@ class test extends system_report {
      */
     public function add_columns(): void {
         $columns = [
-            'test:id',
-            'test:userid',
-            'test:datecreated',
-            'test:affinity',
-            'test:data',
+            'history:answers',
+            'history:processing',
+            'history:understanding',
+            'history:perception',
+            'history:input',
+            'history:timecreated',
         ];
+
+        if ($this->adminreport) {
+            $columns = array_merge(['history:id', 'history:userid'], $columns);
+        }
 
         $this->add_columns_from_entities($columns);
     }
@@ -116,9 +115,17 @@ class test extends system_report {
      */
     protected function add_filters(): void {
         $filters = [
-            'test:userid',
-            'test:view',
+            'history:answers',
+            'history:processing',
+            'history:understanding',
+            'history:perception',
+            'history:input',
+            'history:timecreated',
         ];
+
+        if ($this->adminreport) {
+            $filters = array_merge(['history:userid'], $filters);
+        }
 
         $this->add_filters_from_entities($filters);
     }
