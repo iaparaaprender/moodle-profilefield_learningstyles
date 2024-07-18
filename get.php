@@ -28,7 +28,8 @@ require_once('../../../../config.php');
 require_once($CFG->libdir . '/filelib.php');
 
 if (isset($SESSION->profilefield_learningstyles_styles)) {
-    echo $SESSION->profilefield_learningstyles_styles;
+    echo is_object($SESSION->profilefield_learningstyles_styles) ? @json_encode($SESSION->profilefield_learningstyles_styles)
+                                                                : $SESSION->profilefield_learningstyles_styles;
     exit;
 }
 
@@ -85,7 +86,7 @@ if (!empty($lsfield) && !empty($lsfield->param1)) {
 } else {
     // Allways use the localstyles if the remote service is not configured.
     echo $localstyles;
-    $SESSION->profilefield_learningstyles_styles = $localstyles;
+    $SESSION->profilefield_learningstyles_styles = @json_encode($localstyles);
     exit;
 }
 
@@ -122,10 +123,10 @@ try {
 }
 
 if ($localstyles) {
-    $SESSION->profilefield_learningstyles_styles = $localstyles;
+    $SESSION->profilefield_learningstyles_styles = @json_encode($localstyles);
     echo @json_encode($localstyles);
 } else if ($remotestyles) {
-    $SESSION->profilefield_learningstyles_styles = $remotestyles;
+    $SESSION->profilefield_learningstyles_styles = @json_encode($remotestyles);
     echo @json_encode($remotestyles);
 } else {
     $SESSION->profilefield_learningstyles_nullstyles++;
