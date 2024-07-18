@@ -27,13 +27,13 @@ use core_reportbuilder\local\report\column;
 use core_reportbuilder\local\report\filter;
 
 /**
- * History entity
+ * Getlog entity
  *
  * @package     profilefield_learningstyles
  * @copyright   2024 David Herney - cirano
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class history extends base {
+class getlog extends base {
 
     /**
      * Database tables that this entity uses and their default aliases
@@ -42,7 +42,7 @@ class history extends base {
      */
     protected function get_default_table_aliases(): array {
         return [
-            'profilefield_learningstyles' => 'pls'
+            'profilefield_ls_getlog' => 'plg'
         ];
     }
 
@@ -52,7 +52,7 @@ class history extends base {
      * @return lang_string
      */
     protected function get_default_entity_title(): lang_string {
-        return new lang_string('historytitle', 'profilefield_learningstyles');
+        return new lang_string('getlogtitle', 'profilefield_learningstyles');
     }
 
     /**
@@ -84,7 +84,7 @@ class history extends base {
      * @throws \coding_exception
      */
     protected function get_all_columns(): array {
-        $testalias = $this->get_table_alias('profilefield_learningstyles');
+        $getlogalias = $this->get_table_alias('profilefield_ls_getlog');
 
         $columns[] = (new column(
             'id',
@@ -92,7 +92,7 @@ class history extends base {
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.id")
+            ->add_fields("$getlogalias.id")
             ->set_type(column::TYPE_INTEGER)
             ->set_is_sortable(true);
 
@@ -102,70 +102,50 @@ class history extends base {
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.userid")
+            ->add_fields("$getlogalias.userid")
             ->set_type(column::TYPE_INTEGER)
             ->set_is_sortable(true);
 
         $columns[] = (new column(
-            'processing',
-            new lang_string('dimension_processing', 'profilefield_learningstyles'),
+            'difference',
+            new lang_string('getlog_difference', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.processing")
+            ->add_fields("$getlogalias.difference")
             ->set_type(column::TYPE_INTEGER)
             ->set_is_sortable(true);
 
         $columns[] = (new column(
-            'understanding',
-            new lang_string('dimension_understanding', 'profilefield_learningstyles'),
+            'timerequest',
+            new lang_string('getlog_timerequest', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.understanding")
-            ->set_type(column::TYPE_INTEGER)
-            ->set_is_sortable(true);
-
-        $columns[] = (new column(
-            'perception',
-            new lang_string('dimension_perception', 'profilefield_learningstyles'),
-            $this->get_entity_name()
-        ))
-            ->add_joins($this->get_joins())
-            ->add_fields("$testalias.perception")
-            ->set_type(column::TYPE_INTEGER)
-            ->set_is_sortable(true);
-
-        $columns[] = (new column(
-            'input',
-            new lang_string('dimension_input', 'profilefield_learningstyles'),
-            $this->get_entity_name()
-        ))
-            ->add_joins($this->get_joins())
-            ->add_fields("$testalias.input")
-            ->set_type(column::TYPE_INTEGER)
-            ->set_is_sortable(true);
-
-        $columns[] = (new column(
-            'timecreated',
-            new lang_string('timecreated', 'profilefield_learningstyles'),
-            $this->get_entity_name()
-        ))
-            ->add_joins($this->get_joins())
-            ->add_fields("$testalias.timecreated")
+            ->add_fields("$getlogalias.timerequest")
             ->set_type(column::TYPE_TIMESTAMP)
             ->set_is_sortable(true)
-            ->set_callback(static function(?int $timecreated): string {
-                return empty($timecreated) ? '' : userdate($timecreated, '%Y-%m-%d %H:%M:%S');
+            ->set_callback(static function(?int $timerequest): string {
+                return empty($timerequest) ? '' : userdate($timerequest, '%Y-%m-%d %H:%M:%S');
             });
 
         $columns[] = (new column(
-            'answers',
-            new lang_string('reportdata', 'profilefield_learningstyles'),
+            'localanswers',
+            new lang_string('getlog_localanswers', 'profilefield_learningstyles'),
             $this->get_entity_name()
         ))
             ->add_joins($this->get_joins())
-            ->add_fields("$testalias.answers")
+            ->add_fields("$getlogalias.localanswers")
+            ->set_type(column::TYPE_TEXT)
+            ->set_is_sortable(false);
+
+        $columns[] = (new column(
+            'remoteanswers',
+            new lang_string('getlog_remoteanswers', 'profilefield_learningstyles'),
+            $this->get_entity_name()
+        ))
+            ->add_joins($this->get_joins())
+            ->add_fields("$getlogalias.remoteanswers")
             ->set_type(column::TYPE_TEXT)
             ->set_is_sortable(false);
 
@@ -181,68 +161,50 @@ class history extends base {
     protected function get_all_filters(): array {
 
         $filters = [];
-        $testalias = $this->get_table_alias('profilefield_learningstyles');
+        $getlogalias = $this->get_table_alias('profilefield_ls_getlog');
 
         $filters[] = (new filter(
             number::class,
             'userid',
             new lang_string('reportuserid', 'profilefield_learningstyles'),
             $this->get_entity_name(),
-            "$testalias.userid",
+            "$getlogalias.userid",
         ))
             ->add_joins($this->get_joins());
 
         $filters[] = (new filter(
             text::class,
-            'answers',
-            new lang_string('reportfilterview', 'profilefield_learningstyles'),
+            'localanswers',
+            new lang_string('getlog_localanswers', 'profilefield_learningstyles'),
             $this->get_entity_name(),
-            "$testalias.answers",
+            "$getlogalias.localanswers",
+        ))
+            ->add_joins($this->get_joins());
+
+        $filters[] = (new filter(
+            text::class,
+            'remoteanswers',
+            new lang_string('getlog_remoteanswers', 'profilefield_learningstyles'),
+            $this->get_entity_name(),
+            "$getlogalias.remoteanswers",
         ))
             ->add_joins($this->get_joins());
 
         $filters[] = (new filter(
             number::class,
-            'processing',
-            new lang_string('dimension_processing', 'profilefield_learningstyles'),
+            'difference',
+            new lang_string('getlog_difference', 'profilefield_learningstyles'),
             $this->get_entity_name(),
-            "$testalias.processing",
-        ))
-            ->add_joins($this->get_joins());
-
-        $filters[] = (new filter(
-            number::class,
-            'understanding',
-            new lang_string('dimension_understanding', 'profilefield_learningstyles'),
-            $this->get_entity_name(),
-            "$testalias.understanding",
-        ))
-            ->add_joins($this->get_joins());
-
-        $filters[] = (new filter(
-            number::class,
-            'perception',
-            new lang_string('dimension_perception', 'profilefield_learningstyles'),
-            $this->get_entity_name(),
-            "$testalias.perception",
-        ))
-            ->add_joins($this->get_joins());
-
-        $filters[] = (new filter(
-            number::class,
-            'input',
-            new lang_string('dimension_input', 'profilefield_learningstyles'),
-            $this->get_entity_name(),
-            "$testalias.input",
+            "$getlogalias.difference",
         ))
             ->add_joins($this->get_joins());
 
         $filters[] = (new filter(
             date::class,
-            'timecreated',
-            new lang_string('timecreated', 'profilefield_learningstyles'),
+            'timerequest',
+            new lang_string('getlog_timerequest', 'profilefield_learningstyles'),
             $this->get_entity_name(),
-            "$testalias.timecreated",
+            "$getlogalias.timerequest",
         ))
             ->add_joins($this->get_joins());
 

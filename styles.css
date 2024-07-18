@@ -591,6 +591,45 @@
     color: darksalmon;
 }
 
+#colorscheme {
+    border: 1px dashed #aaa;
+    padding: 10px;
+    background-color: #fff1;
+}
+
+#colorscheme > h4 {
+    font-size: 18px;
+}
+
+#colorscheme > p {
+    font-size: 14px;
+}
+
+#colorscheme > div {
+    display: flex;
+}
+
+#colorscheme > div > div {
+    border: 1px solid;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#colorscheme > div > div.level1 {
+    color: gold;
+    border-color: gold;
+}
+
+#colorscheme > div > div.level2 {
+    color: greenyellow;
+    border-color: greenyellow;
+}
+
+#colorscheme > div > div.level3 {
+    color: darksalmon;
+    border-color: darksalmon;
+}
+
 /* End of Explanations */
 
 @media (max-width: 900px) {
