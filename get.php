@@ -28,8 +28,8 @@ require_once('../../../../config.php');
 require_once($CFG->libdir . '/filelib.php');
 
 if (isset($SESSION->profilefield_learningstyles_styles)) {
-  //  echo $SESSION->profilefield_learningstyles_styles;
-//    exit;
+    echo $SESSION->profilefield_learningstyles_styles;
+    exit;
 }
 
 $ws = new \profilefield_learningstyles\external\get();
