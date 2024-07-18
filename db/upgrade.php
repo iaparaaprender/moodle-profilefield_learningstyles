@@ -114,14 +114,14 @@ function xmldb_profilefield_learningstyles_upgrade($oldversion) {
         $table->add_field('localanswers', XMLDB_TYPE_CHAR, '511', null, null, null, null);
         $table->add_field('remoteanswers', XMLDB_TYPE_CHAR, '511', null, null, null, null);
         $table->add_field('difference', XMLDB_TYPE_INTEGER, '3', null, XMLDB_NOTNULL, null, '0');
-        $table->add_field('timerequired', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, '0');
+        $table->add_field('timerequest', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, '0');
 
         // Adding keys to the table.
         $table->add_key('primary', XMLDB_KEY_PRIMARY, ['id']);
         $table->add_key('userid', XMLDB_KEY_FOREIGN, ['userid'], 'user', ['id']);
 
         // Adding indexes to the table.
-        $table->add_index('timerequired', XMLDB_INDEX_NOTUNIQUE, ['timerequired']);
+        $table->add_index('timerequest', XMLDB_INDEX_NOTUNIQUE, ['timerequest']);
 
         // Conditionally launch create table for infected_files.
         if (!$dbman->table_exists($table)) {
