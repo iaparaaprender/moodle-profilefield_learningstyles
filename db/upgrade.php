@@ -103,6 +103,34 @@ function xmldb_profilefield_learningstyles_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2024012203.06, 'profilefield', 'learningstyles');
     }
 
+    if ($oldversion < 2024012203.1) {
+
+        // Define table to store logs.
+        $table = new xmldb_table('profilefield_ls_getlog');
+
+        // Adding fields to the table.
+        $table->add_field('id', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, XMLDB_SEQUENCE, null);
+        $table->add_field('userid', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, null);
+        $table->add_field('localanswers', XMLDB_TYPE_CHAR, '511', null, null, null, null);
+        $table->add_field('remoteanswers', XMLDB_TYPE_CHAR, '511', null, null, null, null);
+        $table->add_field('difference', XMLDB_TYPE_INTEGER, '3', null, XMLDB_NOTNULL, null, '0');
+        $table->add_field('timerequired', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, '0');
+
+        // Adding keys to the table.
+        $table->add_key('primary', XMLDB_KEY_PRIMARY, ['id']);
+        $table->add_key('userid', XMLDB_KEY_FOREIGN, ['userid'], 'user', ['id']);
+
+        // Adding indexes to the table.
+        $table->add_index('timerequired', XMLDB_INDEX_NOTUNIQUE, ['timerequired']);
+
+        // Conditionally launch create table for infected_files.
+        if (!$dbman->table_exists($table)) {
+            $dbman->create_table($table);
+        }
+
+        upgrade_plugin_savepoint(true, 2024012203.1, 'profilefield', 'learningstyles');
+    }
+
     return true;
 }
 

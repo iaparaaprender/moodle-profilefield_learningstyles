@@ -88,6 +88,8 @@ $string['testreporttitle'] = 'Learning styles test report';
 $string['testresults'] = 'Test results';
 $string['testtitle'] = 'Learning styles test';
 $string['timecreated'] = 'Time created';
+$string['wshash'] = 'Web service hash';
+$string['wsuri'] = 'Web service URI';
 
 // Helps.
 $string['helpstyle_active'] = 'People with an active learning style learn best when they actively participate in activities or exercises. They prefer to learn by doing and experimenting in a practical way. This is why experiments and simulations can be some of their favourite activities. They may also show an interest in highly interactive resources.';

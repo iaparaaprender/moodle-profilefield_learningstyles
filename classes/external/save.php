@@ -65,7 +65,7 @@ class save extends external_api {
      * @return bool
      */
     public static function execute(string $sesskey, string $answers): bool {
-        global $USER, $PAGE, $DB;
+        global $USER, $PAGE, $DB, $SESSION;
 
         if (!isloggedin() || isguestuser()) {
             require_login(null, false);
@@ -127,6 +127,11 @@ class save extends external_api {
             $DB->update_record('user_info_data', $data);
         } else {
             $DB->insert_record('user_info_data', $data);
+        }
+
+        if (isset($SESSION->profilefield_learningstyles_styles)) {
+            unset($SESSION->profilefield_learningstyles_styles);
+            $SESSION->profilefield_learningstyles_nullstyles = 0;
         }
 
         // Save data to profilefield_learningstyles table as history.

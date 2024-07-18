@@ -89,6 +89,8 @@ $string['testreporttitle'] = 'Reporte de estilos de aprendizaje';
 $string['testresults'] = 'Resultados de la prueba';
 $string['testtitle'] = '¿Cómo prefiero aprender?';
 $string['timecreated'] = 'Fecha de creación';
+$string['wshash'] = 'Hash del servicio web';
+$string['wsuri'] = 'URI del servicio web';
 
 // Helps.
 $string['helpstyle_active'] = 'Las personas con un estilo de aprendizaje activo aprenden mejor cuando participan activamente en actividades o ejercicios. Prefieren aprender haciendo y experimentando de manera práctica. Es por esta razón que los experimentos y las simulaciones pueden ser algunas de sus actividades favoritas. También pueden mostrar interés por recursos altamente interactivos.';

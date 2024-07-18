@@ -32,9 +32,15 @@ class profile_define_learningstyles extends profile_define_base {
     /**
      * Add elements for creating/editing a learningstyles profile field.
      *
-     * @param moodleform $form
+     * @param \moodleform $form
      */
     public function define_form_specific($form) {
+
+        $form->addElement('text', 'param1', get_string('wsuri', 'profilefield_learningstyles'));
+        $form->setType('param1', PARAM_URL);
+
+        $form->addElement('text', 'param2', get_string('wshash', 'profilefield_learningstyles'));
+        $form->setType('param1', PARAM_TEXT);
 
     }
 }
