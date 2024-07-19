@@ -61,7 +61,7 @@ if (!empty($lsfield) && !empty($lsfield->param1)) {
         $curl->setHeader('Authorization: Basic ' . $lsfield->param2);
     }
 
-    $curlresponse = $curl->get($lsfield->param1, ['email' => $USER->email]);
+    $curlresponse = $curl->post($lsfield->param1, ['email' => $USER->email]);
 
     if ($curlresponse) {
         $response = @json_decode($curlresponse);
