@@ -111,6 +111,7 @@ class save extends external_api {
         }
 
         $affinity = \profilefield_learningstyles\styles::calculate_affinity($answers);
+        $tags = \profilefield_learningstyles\styles::generate_tagsstring($affinity);
 
         $data = new \stdClass();
         $data->userid = $USER->id;
@@ -120,6 +121,7 @@ class save extends external_api {
             'affinity' => $affinity,
             'timecreated' => time(),
             'datecreated' => date('Y-m-d H:i:s'),
+            'tags' => $tags,
         ]);
 
         if ($dataid = $DB->get_field('user_info_data', 'id', ['userid' => $USER->id, 'fieldid' => $lsfield->id])) {

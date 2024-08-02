@@ -251,4 +251,32 @@ class styles {
         return null;
     }
 
+    /**
+     * Generates usable tags for profile-based access restrictions.
+     *
+     * @param array $affinity
+     * @return string
+     */
+    public static function generate_tagsstring(array $affinity) : string {
+
+        $tags = [];
+        $grassping = [];
+        $transforming = [];
+        foreach (self::QUESTIONS_STRUCTURE as $style) {
+            if (isset($affinity[$style['key']])) {
+                $trend = $affinity[$style['key']] > 0 ? $style['styles'][1] : $style['styles'][0];
+                $tags[] = $style['key'] . ':' . $trend;
+
+                if ($style['key'] == 'processing' || $style['key'] == 'understanding') {
+                    $transforming[] = $trend;
+                } else {
+                    $grassping[] = $trend;
+                }
+            }
+        }
+
+        return '|' . implode('|', $tags) .
+               '|grassping:' . implode('-', $grassping) .
+               '|transforming:' . implode('-', $transforming) . '|';
+    }
 }
