@@ -42,5 +42,8 @@ class profile_define_learningstyles extends profile_define_base {
         $form->addElement('text', 'param2', get_string('wshash', 'profilefield_learningstyles'));
         $form->setType('param1', PARAM_TEXT);
 
+        $form->addElement('text', 'param3', get_string('courseid', 'profilefield_learningstyles'));
+        $form->setType('param3', PARAM_TEXT);
+
     }
 }

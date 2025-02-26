@@ -40,6 +40,7 @@ $string['colorschemadesc'] = 'La combinación de colores muestra su nivel de afi
 $string['colorschematitle'] = 'Esquema de colores';
 $string['completetest'] = 'Completar la prueba';
 $string['continue'] = 'Continuar';
+$string['courseid'] = 'Id de curso del caso de estudio';
 $string['datecreated'] = 'Fecha de creación';
 $string['dimension_input'] = 'Entrada';
 $string['dimension_perception'] = 'Percepción';

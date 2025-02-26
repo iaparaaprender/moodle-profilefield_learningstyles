@@ -40,6 +40,7 @@ $string['colorschemadesc'] = 'The color combination shows your level of affinity
 $string['colorschematitle'] = 'Color scheme';
 $string['completetest'] = 'Complete the test';
 $string['continue'] = 'Continue';
+$string['courseid'] = 'Case Study Course ID';
 $string['datecreated'] = 'Date created';
 $string['dimension_input'] = 'Input';
 $string['dimension_perception'] = 'Perception';
