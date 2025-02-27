@@ -189,6 +189,7 @@ if ($trendfieldid) {
     } else {
         $DB->insert_record('user_info_data', $datatrend);
     }
+    profile_load_custom_fields($USER);
 }
 
 exit;
