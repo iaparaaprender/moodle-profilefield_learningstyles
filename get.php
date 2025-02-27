@@ -27,9 +27,8 @@ define('AJAX_SCRIPT', true);
 require_once('../../../../config.php');
 require_once($CFG->libdir . '/filelib.php');
 
-if (isset($SESSION->profilefield_learningstyles_styles)) {
-    echo is_object($SESSION->profilefield_learningstyles_styles) ? @json_encode($SESSION->profilefield_learningstyles_styles)
-                                                                : $SESSION->profilefield_learningstyles_styles;
+if ($SESSION->profilefield_learningstyles_nullstyles > 5) {
+    echo 'null';
     exit;
 }
 
@@ -51,7 +50,9 @@ foreach ($infofields as $infofield) {
     }
 }
 
-$usedgroupskeys = ['base', 'encuesta', 'balaceado', 'ia'];
+$trendfieldid = $DB->get_field('user_info_field', 'id', ['shortname' => 'learning_trend'], IGNORE_MULTIPLE);
+
+$usedgroupskeys = ['base', 'encuesta', 'balanceado', 'ia'];
 $courseid = null;
 $sourcetype = 'encuesta';
 if (!empty($lsfield) && !empty($lsfield->param3)) {
@@ -145,6 +146,7 @@ $data->localanswers = @json_encode($localstyles);
 $data->remoteanswers = @json_encode($remotestyles);
 $data->difference = $difference;
 $data->timerequest = time();
+$trendvalue = '';
 
 try {
     $DB->insert_record('profilefield_ls_getlog', $data);
@@ -152,7 +154,7 @@ try {
     debugging($e->getMessage());
 }
 
-if ($sourcetype == 'base' || $sourcetype == 'balaceado') {
+if ($sourcetype == 'base' || $sourcetype == 'balanceado') {
 
     $SESSION->profilefield_learningstyles_styles = 'null';
     echo 'null';
@@ -161,16 +163,32 @@ if ($sourcetype == 'base' || $sourcetype == 'balaceado') {
 
     $SESSION->profilefield_learningstyles_styles = @json_encode($localstyles);
     echo @json_encode($localstyles);
+    $trendvalue = \profilefield_learningstyles\styles::generate_tagsstring((array)$localstyles);
 
 } else if ($sourcetype == 'ia' && $remotestyles) {
 
     $SESSION->profilefield_learningstyles_styles = @json_encode($remotestyles);
     echo @json_encode($remotestyles);
+    $trendvalue = \profilefield_learningstyles\styles::generate_tagsstring((array)$remotestyles);
 
 } else {
 
     $SESSION->profilefield_learningstyles_nullstyles++;
     echo 'null';
+}
+
+if ($trendfieldid) {
+    $datatrend = new \stdClass();
+    $datatrend->userid = $USER->id;
+    $datatrend->fieldid = $trendfieldid;
+    $datatrend->data = $trendvalue;
+
+    if ($dataid = $DB->get_field('user_info_data', 'id', ['userid' => $USER->id, 'fieldid' => $trendfieldid])) {
+        $datatrend->id = $dataid;
+        $DB->update_record('user_info_data', $datatrend);
+    } else {
+        $DB->insert_record('user_info_data', $datatrend);
+    }
 }
 
 exit;
